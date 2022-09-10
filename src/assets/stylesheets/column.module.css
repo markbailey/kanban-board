@@ -1,0 +1,71 @@
+/*
+  COLUMN
+  A stack element for displaying Cards (tickets)
+  in a contextual way.
+*/
+
+/* Base Column Element */
+.column {
+  --col-br-width: 1px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-self: flex-start;
+  gap: var(--spacing-1);
+
+  background-color: var(--paper-color) 1;
+  padding: var(--spacing-1);
+  border: var(--col-br-width) solid var(--gray-color);
+  border-radius: var(--rounded-sm);
+}
+
+/* Named Columns */
+[data-column='backlog'] .column_heading {
+  --col-heading-bg: var(--backlog-color);
+}
+
+[data-column='backlog'] > :is([data-card='add'], [data-card='drop']) {
+  --card-br-color: var(--backlog-color);
+}
+
+[data-column='to-do'] .column_heading {
+  --col-heading-bg: var(--to-do-color);
+}
+
+[data-column='to-do'] > :is([data-card='add'], [data-card='drop']) {
+  --card-br-color: var(--to-do-color);
+}
+
+[data-column='in-development'] .column_heading {
+  --col-heading-bg: var(--in-development-color);
+}
+
+[data-column='in-development'] > :is([data-card='add'], [data-card='drop']) {
+  --card-br-color: var(--in-development-color);
+}
+
+[data-column='completed'] .column_heading {
+  --col-heading-bg: var(--completed-color);
+}
+
+[data-column='completed'] > :is([data-card='add'], [data-card='drop']) {
+  --card-br-color: var(--completed-color);
+}
+
+/* Column Heading Element */
+.column_heading {
+  --col-heading-bg: var(--gray-dark-color);
+  --col-heading-color: var(--paper-color);
+  --col-heading-offset: calc(var(--spacing-1) * -1);
+
+  background-color: var(--col-heading-bg);
+  color: var(--col-heading-color);
+  text-align: center;
+  text-transform: capitalize;
+
+  padding: var(--spacing-1);
+  margin: var(--col-heading-offset) var(--col-heading-offset) 0;
+  border-radius: var(--rounded-sm) var(--rounded-sm) 0 0;
+  outline: var(--col-br-width) solid var(--col-heading-bg);
+}

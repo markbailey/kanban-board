@@ -1,0 +1,138 @@
+::placeholder {
+  color: var(--gray-color);
+}
+
+/* Form Label */
+.formLabel {
+  display: block;
+  font-size: small;
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--spacing-1);
+}
+
+/* Form Controls */
+.formControl {
+  --control-br-width: 1px;
+  --control-lh-x: 1.5;
+
+  display: block;
+  width: 100%;
+  padding: var(--spacing-1) var(--spacing-2);
+  color: var(--gray-dark-color);
+  background-color: var(--white-color);
+  border: var(--control-br-width) solid var(--gray-color);
+  border-radius: var(--rounded-sm);
+
+  line-height: calc(var(--spacing-2) * var(--control-lh-x));
+}
+
+/* Custom Select */
+.select {
+  position: relative;
+}
+
+.select .select_value {
+  z-index: 9;
+  position: absolute;
+  top: 50%;
+  left: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  padding-right: calc(var(--spacing-2) * 2.5) !important;
+  background-color: var(--white-color);
+  border-radius: var(--rounded-sm);
+  font-weight: var(--fw-bold);
+  font-size: small;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23cccccc'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3C/svg%3E");
+  background-position: 92.5% center;
+  background-repeat: no-repeat;
+}
+
+/* Button */
+.button {
+  --btn-p: var(--spacing-1) var(--spacing-2);
+
+  padding: var(--btn-p);
+  border: none;
+  border-radius: var(--rounded-sm);
+}
+
+.button:not(:disabled) {
+  --btn-color: rgb(0 0 0 / 0.05);
+  color: var(--gray-dark-color);
+  background-color: var(--btn-color);
+  border: 1px solid var(--btn-color);
+  cursor: pointer;
+}
+
+/* Filter Form */
+form.filter {
+  display: grid;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+}
+
+form.filter .formControl {
+  font-size: large;
+}
+
+form.filter input {
+  padding-right: var(--spacing-4);
+  background-position: 97.5% center;
+  background-repeat: no-repeat;
+}
+
+form.filter input {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23cccccc'%3E%3Cpath d='M0 0h24v24H0V0z' fill='none'/%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E");
+}
+
+form.filter select {
+  --control-br-width: 0;
+  font-weight: var(--fw-bold);
+}
+
+form.filter .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+}
+
+/* Create Ticket Form */
+form.createTicket {
+  display: grid;
+  gap: var(--spacing-4);
+}
+
+form.createTicket .formControl {
+  --control-br-width: 0;
+  --control-lh-x: 2;
+  padding: var(--spacing-1);
+}
+
+form.createTicket select {
+  padding: var(--spacing-2) var(--spacing-1) !important;
+}
+
+form.createTicket .select .select_value {
+  border: 1px solid var(--gray-color);
+}
+
+form.createTicket .button {
+  --btn-p: var(--spacing-2);
+}
+
+form.createTicket .button:not(:disabled) {
+  color: var(--white-color);
+  background-color: var(--backlog-color);
+}
+
+@media screen and (min-width: 36rem) {
+  form.filter {
+    display: inline-grid;
+    grid-template-columns: 1fr auto auto;
+  }
+}

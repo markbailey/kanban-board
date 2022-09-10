@@ -1,0 +1,22 @@
+{
+  "columns": ["backlog", "to-do", "in-development", "completed"],
+  "tags": ["Android", "iOS"],
+  "tickets": [
+    {
+      "id": "A1",
+      "tag": "iOS",
+      "title": "Add splash screen",
+      "description": "Use company logo",
+      "link": "http://www.figma.com",
+      "status": "backlog"
+    },
+    {
+      "id": "A2",
+      "tag": "Android",
+      "title": "Onboarding animation v2",
+      "description": "Pilot version with Lottie",
+      "link": "http://www.figma.com",
+      "status": "backlog"
+    }
+  ]
+}

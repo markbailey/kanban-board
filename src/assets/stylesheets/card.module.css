@@ -1,0 +1,93 @@
+/*
+  CARD
+*/
+
+.card {
+  display: grid;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  padding: var(--spacing-2);
+  border-radius: var(--rounded-sm);
+}
+
+.card:not([data-card='add'], [data-card='drop']) {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  box-shadow: 0 0 4px 0 rgb(0 0 0 / 0.15);
+}
+
+.card > span {
+  font-weight: var(--fw-bold);
+}
+
+.card h3 {
+  margin: var(--spacing-2) 0 0;
+  font-size: medium;
+}
+
+.card p {
+  color: var(--gray-color);
+  margin: 0 0 var(--spacing-2);
+  font-size: small;
+}
+
+.card a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--gray-color);
+  border-bottom: 1px solid;
+
+  font-weight: var(--fw-bold);
+  font-size: small;
+  text-decoration: none;
+}
+
+/* ADDCARD, DROPCARD */
+[data-card='add'],
+[data-card='drop'] {
+  --card-br: dashed;
+  --card-br-color: var(--gray-dark-color);
+
+  place-content: center center;
+
+  color: var(--gray-color);
+  padding: var(--spacing-4);
+  border: 1px var(--card-br) var(--card-br-color);
+
+  font-size: small;
+}
+
+[data-card='add'] *,
+[data-card='drop'] * {
+  pointer-events: none;
+}
+
+[data-card='add'] {
+  cursor: pointer;
+}
+
+[data-card='drop'] {
+  --card-br: dotted;
+}
+
+/* TAG */
+.tag {
+  --tag-bg-color: var(--black-color);
+  --tag-fg-color: var(--white-color);
+
+  color: var(--tag-fg-color);
+  background-color: var(--tag-bg-color);
+  padding: calc(var(--spacing-1) / 2) var(--spacing-1);
+  border-radius: var(--rounded-sm);
+}
+
+/* Named Tags */
+[data-tag='iOS'] {
+  --tag-bg-color: var(--black-color);
+  --tag-fg-color: var(--white-color);
+}
+
+[data-tag='Android'] {
+  --tag-bg-color: var(--green-color);
+  --tag-fg-color: var(--white-color);
+}
