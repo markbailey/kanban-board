@@ -26,7 +26,7 @@ function Modal(props: ModalProps) {
   return mounted ? (
     <div className={className}>
       <div className={css.modal_dialog}>
-        <button className={css.button_close} onClick={onClose}>
+        <button className={css.button_close} title="Close modal" onClick={onClose}>
           &times;
         </button>
         {children}
