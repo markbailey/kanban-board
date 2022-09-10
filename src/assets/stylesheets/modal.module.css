@@ -49,7 +49,7 @@
 
 /* CLOSE BUTTON */
 .button_close {
-  --color-opacity: 0.5;
+  --color-opacity: 0.15;
   --bg-opacity: 0;
 
   appearance: none;
@@ -58,7 +58,7 @@
   right: var(--spacing-1);
 
   padding: calc(var(--spacing-1) / 2);
-  background-color: rgb(0 0 0 / var(--bg-opacity));
+  background-color: rgb(0 0 0 / var(--bg-opacity)) !important;
   color: rgb(0 0 0 / var(--color-opacity));
 
   border: none;
