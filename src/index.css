@@ -53,7 +53,7 @@ body {
 
   color: var(--text-color);
   background-color: var(--bg-color);
-  padding: var(--spacing-2);
+  padding: var(--spacing-4);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
